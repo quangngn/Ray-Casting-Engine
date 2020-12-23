@@ -1,0 +1,837 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		275FC2BF2591AF50006A8E4A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FC2BE2591AF50006A8E4A /* CameraManager.swift */; };
+		275FC2C52591AFBC006A8E4A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FC2C42591AFBC006A8E4A /* Camera.swift */; };
+		275FC2CE2591C27D006A8E4A /* BasicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FC2CD2591C27D006A8E4A /* BasicCamera.swift */; };
+		275FC2D62591D06D006A8E4A /* Rays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FC2D52591D06D006A8E4A /* Rays.swift */; };
+		27608C2E258F00BE009041AF /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C2D258F00BE009041AF /* Node.swift */; };
+		27608C34258F06AB009041AF /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C33258F06AB009041AF /* Renderable.swift */; };
+		27608C3C258F07E5009041AF /* MeshLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C3B258F07E5009041AF /* MeshLib.swift */; };
+		27608C41258F1243009041AF /* TestGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C40258F1243009041AF /* TestGameObject.swift */; };
+		27608C46258F1445009041AF /* MathLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C45258F1445009041AF /* MathLib.swift */; };
+		27608C5C258F26E3009041AF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C5B258F26E3009041AF /* Scene.swift */; };
+		27608C62258F2736009041AF /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C61258F2736009041AF /* SceneManager.swift */; };
+		27608C6B258F307C009041AF /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27608C6A258F307C009041AF /* BasicScene.swift */; };
+		27BEFD102585E33900F39BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD0F2585E33900F39BC9 /* AppDelegate.swift */; };
+		27BEFD152585E33900F39BC9 /* RayCastingEngine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD132585E33900F39BC9 /* RayCastingEngine.xcdatamodeld */; };
+		27BEFD172585E33A00F39BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BEFD162585E33A00F39BC9 /* Assets.xcassets */; };
+		27BEFD1A2585E33A00F39BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BEFD182585E33A00F39BC9 /* Main.storyboard */; };
+		27BEFD262585E33A00F39BC9 /* RayCastingEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD252585E33A00F39BC9 /* RayCastingEngineTests.swift */; };
+		27BEFD312585E33A00F39BC9 /* RayCastingEngineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD302585E33A00F39BC9 /* RayCastingEngineUITests.swift */; };
+		27BEFD512585E5B600F39BC9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD502585E5B600F39BC9 /* MainView.swift */; };
+		27BEFD5D2585E78700F39BC9 /* MainViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD5C2585E78700F39BC9 /* MainViewRenderer.swift */; };
+		27BEFD622585EBDF00F39BC9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD612585EBDF00F39BC9 /* Preferences.swift */; };
+		27BEFD692585EE7900F39BC9 /* CoreEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD682585EE7900F39BC9 /* CoreEngine.swift */; };
+		27BEFD712585EFF100F39BC9 /* BasicRayCastingShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD702585EFF100F39BC9 /* BasicRayCastingShader.metal */; };
+		27BEFD762585F01000F39BC9 /* BasicRayCastingShaderTypes.metal in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD752585F01000F39BC9 /* BasicRayCastingShaderTypes.metal */; };
+		27BEFD7B2585F04100F39BC9 /* VertexShaderLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD7A2585F04100F39BC9 /* VertexShaderLib.swift */; };
+		27BEFD802585F6BC00F39BC9 /* FragmentShaderLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD7F2585F6BC00F39BC9 /* FragmentShaderLib.swift */; };
+		27BEFD852585F8D300F39BC9 /* RenderPipelineDescriptorLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD842585F8D300F39BC9 /* RenderPipelineDescriptorLib.swift */; };
+		27BEFD8A2585FCC100F39BC9 /* VertexDescriptorLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD892585FCC100F39BC9 /* VertexDescriptorLib.swift */; };
+		27BEFD8F2585FEEC00F39BC9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD8E2585FEEC00F39BC9 /* Utilities.swift */; };
+		27BEFD942585FF5400F39BC9 /* CoreTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD932585FF5400F39BC9 /* CoreTypes.swift */; };
+		27BEFD99258601EC00F39BC9 /* RenderPipelineStateLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFD98258601EC00F39BC9 /* RenderPipelineStateLib.swift */; };
+		27CB3A2B259110FA00A8494E /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB3A2A259110FA00A8494E /* Ray.swift */; };
+		27CB3A302591229400A8494E /* Walls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB3A2F2591229400A8494E /* Walls.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27BEFD222585E33A00F39BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27BEFD042585E33900F39BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27BEFD0B2585E33900F39BC9;
+			remoteInfo = RayCastingEngine;
+		};
+		27BEFD2D2585E33A00F39BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27BEFD042585E33900F39BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27BEFD0B2585E33900F39BC9;
+			remoteInfo = RayCastingEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		275FC2BE2591AF50006A8E4A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		275FC2C42591AFBC006A8E4A /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		275FC2CD2591C27D006A8E4A /* BasicCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCamera.swift; sourceTree = "<group>"; };
+		275FC2D52591D06D006A8E4A /* Rays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rays.swift; sourceTree = "<group>"; };
+		27608C2D258F00BE009041AF /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		27608C33258F06AB009041AF /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		27608C3B258F07E5009041AF /* MeshLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshLib.swift; sourceTree = "<group>"; };
+		27608C40258F1243009041AF /* TestGameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameObject.swift; sourceTree = "<group>"; };
+		27608C45258F1445009041AF /* MathLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLib.swift; sourceTree = "<group>"; };
+		27608C5B258F26E3009041AF /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		27608C61258F2736009041AF /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		27608C6A258F307C009041AF /* BasicScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
+		27BEFD0C2585E33900F39BC9 /* RayCastingEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RayCastingEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BEFD0F2585E33900F39BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27BEFD142585E33900F39BC9 /* RayCastingEngine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RayCastingEngine.xcdatamodel; sourceTree = "<group>"; };
+		27BEFD162585E33A00F39BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27BEFD192585E33A00F39BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27BEFD1B2585E33A00F39BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27BEFD1C2585E33A00F39BC9 /* RayCastingEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RayCastingEngine.entitlements; sourceTree = "<group>"; };
+		27BEFD212585E33A00F39BC9 /* RayCastingEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RayCastingEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BEFD252585E33A00F39BC9 /* RayCastingEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayCastingEngineTests.swift; sourceTree = "<group>"; };
+		27BEFD272585E33A00F39BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27BEFD2C2585E33A00F39BC9 /* RayCastingEngineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RayCastingEngineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BEFD302585E33A00F39BC9 /* RayCastingEngineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayCastingEngineUITests.swift; sourceTree = "<group>"; };
+		27BEFD322585E33A00F39BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27BEFD502585E5B600F39BC9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		27BEFD5C2585E78700F39BC9 /* MainViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRenderer.swift; sourceTree = "<group>"; };
+		27BEFD612585EBDF00F39BC9 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		27BEFD682585EE7900F39BC9 /* CoreEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreEngine.swift; sourceTree = "<group>"; };
+		27BEFD702585EFF100F39BC9 /* BasicRayCastingShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicRayCastingShader.metal; sourceTree = "<group>"; };
+		27BEFD752585F01000F39BC9 /* BasicRayCastingShaderTypes.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicRayCastingShaderTypes.metal; sourceTree = "<group>"; };
+		27BEFD7A2585F04100F39BC9 /* VertexShaderLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexShaderLib.swift; sourceTree = "<group>"; };
+		27BEFD7F2585F6BC00F39BC9 /* FragmentShaderLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentShaderLib.swift; sourceTree = "<group>"; };
+		27BEFD842585F8D300F39BC9 /* RenderPipelineDescriptorLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineDescriptorLib.swift; sourceTree = "<group>"; };
+		27BEFD892585FCC100F39BC9 /* VertexDescriptorLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorLib.swift; sourceTree = "<group>"; };
+		27BEFD8E2585FEEC00F39BC9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		27BEFD932585FF5400F39BC9 /* CoreTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTypes.swift; sourceTree = "<group>"; };
+		27BEFD98258601EC00F39BC9 /* RenderPipelineStateLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLib.swift; sourceTree = "<group>"; };
+		27CB3A2A259110FA00A8494E /* Ray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ray.swift; sourceTree = "<group>"; };
+		27CB3A2F2591229400A8494E /* Walls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walls.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27BEFD092585E33900F39BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BEFD1E2585E33A00F39BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BEFD292585E33A00F39BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		275FC2C32591AFAD006A8E4A /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				275FC2CD2591C27D006A8E4A /* BasicCamera.swift */,
+			);
+			path = Cameras;
+			sourceTree = "<group>";
+		};
+		275FC2CC2591C268006A8E4A /* Camera Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				275FC2C42591AFBC006A8E4A /* Camera.swift */,
+			);
+			path = "Camera Protocols";
+			sourceTree = "<group>";
+		};
+		275FC2DA2591D09B006A8E4A /* Ray Casting Object */ = {
+			isa = PBXGroup;
+			children = (
+				275FC2D52591D06D006A8E4A /* Rays.swift */,
+				27CB3A2F2591229400A8494E /* Walls.swift */,
+			);
+			path = "Ray Casting Object";
+			sourceTree = "<group>";
+		};
+		27608C32258F062B009041AF /* Models Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				27608C33258F06AB009041AF /* Renderable.swift */,
+			);
+			path = "Models Protocols";
+			sourceTree = "<group>";
+		};
+		27608C4A258F166E009041AF /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD752585F01000F39BC9 /* BasicRayCastingShaderTypes.metal */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		27608C60258F271F009041AF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				27608C61258F2736009041AF /* SceneManager.swift */,
+				275FC2BE2591AF50006A8E4A /* CameraManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		27608C69258F3065009041AF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				27608C6A258F307C009041AF /* BasicScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		27608C72258F3415009041AF /* Game Objects */ = {
+			isa = PBXGroup;
+			children = (
+				275FC2DA2591D09B006A8E4A /* Ray Casting Object */,
+				27608C40258F1243009041AF /* TestGameObject.swift */,
+			);
+			path = "Game Objects";
+			sourceTree = "<group>";
+		};
+		27BEFD032585E33900F39BC9 = {
+			isa = PBXGroup;
+			children = (
+				27BEFD0E2585E33900F39BC9 /* RayCastingEngine */,
+				27BEFD412585E35900F39BC9 /* Others */,
+			);
+			sourceTree = "<group>";
+		};
+		27BEFD0D2585E33900F39BC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD0C2585E33900F39BC9 /* RayCastingEngine.app */,
+				27BEFD212585E33A00F39BC9 /* RayCastingEngineTests.xctest */,
+				27BEFD2C2585E33A00F39BC9 /* RayCastingEngineUITests.xctest */,
+			);
+			name = Products;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		27BEFD0E2585E33900F39BC9 /* RayCastingEngine */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD662585EE4500F39BC9 /* Core */,
+				27BEFD4C2585E3EC00F39BC9 /* View */,
+				27BEFD582585E64F00F39BC9 /* Metal Shaders */,
+				27BEFD572585E63600F39BC9 /* Models */,
+				27BEFD422585E36F00F39BC9 /* Others */,
+			);
+			path = RayCastingEngine;
+			sourceTree = "<group>";
+		};
+		27BEFD242585E33A00F39BC9 /* RayCastingEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD252585E33A00F39BC9 /* RayCastingEngineTests.swift */,
+				27BEFD272585E33A00F39BC9 /* Info.plist */,
+			);
+			path = RayCastingEngineTests;
+			sourceTree = "<group>";
+		};
+		27BEFD2F2585E33A00F39BC9 /* RayCastingEngineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD302585E33A00F39BC9 /* RayCastingEngineUITests.swift */,
+				27BEFD322585E33A00F39BC9 /* Info.plist */,
+			);
+			path = RayCastingEngineUITests;
+			sourceTree = "<group>";
+		};
+		27BEFD412585E35900F39BC9 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD0D2585E33900F39BC9 /* Products */,
+				27BEFD2F2585E33A00F39BC9 /* RayCastingEngineUITests */,
+				27BEFD242585E33A00F39BC9 /* RayCastingEngineTests */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		27BEFD422585E36F00F39BC9 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD162585E33A00F39BC9 /* Assets.xcassets */,
+				27BEFD132585E33900F39BC9 /* RayCastingEngine.xcdatamodeld */,
+				27BEFD1C2585E33A00F39BC9 /* RayCastingEngine.entitlements */,
+				27BEFD1B2585E33A00F39BC9 /* Info.plist */,
+				27BEFD0F2585E33900F39BC9 /* AppDelegate.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		27BEFD4C2585E3EC00F39BC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD182585E33A00F39BC9 /* Main.storyboard */,
+				27BEFD502585E5B600F39BC9 /* MainView.swift */,
+				27BEFD5C2585E78700F39BC9 /* MainViewRenderer.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27BEFD552585E61700F39BC9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD7A2585F04100F39BC9 /* VertexShaderLib.swift */,
+				27BEFD7F2585F6BC00F39BC9 /* FragmentShaderLib.swift */,
+				27BEFD892585FCC100F39BC9 /* VertexDescriptorLib.swift */,
+				27BEFD842585F8D300F39BC9 /* RenderPipelineDescriptorLib.swift */,
+				27BEFD98258601EC00F39BC9 /* RenderPipelineStateLib.swift */,
+				27608C3B258F07E5009041AF /* MeshLib.swift */,
+				27608C45258F1445009041AF /* MathLib.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		27BEFD562585E62800F39BC9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD612585EBDF00F39BC9 /* Preferences.swift */,
+				27BEFD8E2585FEEC00F39BC9 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		27BEFD572585E63600F39BC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				275FC2CC2591C268006A8E4A /* Camera Protocols */,
+				27608C32258F062B009041AF /* Models Protocols */,
+				27608C60258F271F009041AF /* Managers */,
+				275FC2C32591AFAD006A8E4A /* Cameras */,
+				27608C69258F3065009041AF /* Scenes */,
+				27608C72258F3415009041AF /* Game Objects */,
+				27608C2D258F00BE009041AF /* Node.swift */,
+				27608C5B258F26E3009041AF /* Scene.swift */,
+				27CB3A2A259110FA00A8494E /* Ray.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27BEFD582585E64F00F39BC9 /* Metal Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD702585EFF100F39BC9 /* BasicRayCastingShader.metal */,
+				27608C4A258F166E009041AF /* Types */,
+			);
+			path = "Metal Shaders";
+			sourceTree = "<group>";
+		};
+		27BEFD662585EE4500F39BC9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFD562585E62800F39BC9 /* Utilities */,
+				27BEFD552585E61700F39BC9 /* Lib */,
+				27BEFD682585EE7900F39BC9 /* CoreEngine.swift */,
+				27BEFD932585FF5400F39BC9 /* CoreTypes.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27BEFD0B2585E33900F39BC9 /* RayCastingEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BEFD352585E33A00F39BC9 /* Build configuration list for PBXNativeTarget "RayCastingEngine" */;
+			buildPhases = (
+				27BEFD082585E33900F39BC9 /* Sources */,
+				27BEFD092585E33900F39BC9 /* Frameworks */,
+				27BEFD0A2585E33900F39BC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RayCastingEngine;
+			productName = RayCastingEngine;
+			productReference = 27BEFD0C2585E33900F39BC9 /* RayCastingEngine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27BEFD202585E33A00F39BC9 /* RayCastingEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BEFD382585E33A00F39BC9 /* Build configuration list for PBXNativeTarget "RayCastingEngineTests" */;
+			buildPhases = (
+				27BEFD1D2585E33A00F39BC9 /* Sources */,
+				27BEFD1E2585E33A00F39BC9 /* Frameworks */,
+				27BEFD1F2585E33A00F39BC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27BEFD232585E33A00F39BC9 /* PBXTargetDependency */,
+			);
+			name = RayCastingEngineTests;
+			productName = RayCastingEngineTests;
+			productReference = 27BEFD212585E33A00F39BC9 /* RayCastingEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27BEFD2B2585E33A00F39BC9 /* RayCastingEngineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BEFD3B2585E33A00F39BC9 /* Build configuration list for PBXNativeTarget "RayCastingEngineUITests" */;
+			buildPhases = (
+				27BEFD282585E33A00F39BC9 /* Sources */,
+				27BEFD292585E33A00F39BC9 /* Frameworks */,
+				27BEFD2A2585E33A00F39BC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27BEFD2E2585E33A00F39BC9 /* PBXTargetDependency */,
+			);
+			name = RayCastingEngineUITests;
+			productName = RayCastingEngineUITests;
+			productReference = 27BEFD2C2585E33A00F39BC9 /* RayCastingEngineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27BEFD042585E33900F39BC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					27BEFD0B2585E33900F39BC9 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					27BEFD202585E33A00F39BC9 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 27BEFD0B2585E33900F39BC9;
+					};
+					27BEFD2B2585E33A00F39BC9 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 27BEFD0B2585E33900F39BC9;
+					};
+				};
+			};
+			buildConfigurationList = 27BEFD072585E33900F39BC9 /* Build configuration list for PBXProject "RayCastingEngine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27BEFD032585E33900F39BC9;
+			productRefGroup = 27BEFD0D2585E33900F39BC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27BEFD0B2585E33900F39BC9 /* RayCastingEngine */,
+				27BEFD202585E33A00F39BC9 /* RayCastingEngineTests */,
+				27BEFD2B2585E33A00F39BC9 /* RayCastingEngineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27BEFD0A2585E33900F39BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BEFD172585E33A00F39BC9 /* Assets.xcassets in Resources */,
+				27BEFD1A2585E33A00F39BC9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BEFD1F2585E33A00F39BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BEFD2A2585E33A00F39BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27BEFD082585E33900F39BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27608C34258F06AB009041AF /* Renderable.swift in Sources */,
+				27608C6B258F307C009041AF /* BasicScene.swift in Sources */,
+				27BEFD5D2585E78700F39BC9 /* MainViewRenderer.swift in Sources */,
+				27BEFD99258601EC00F39BC9 /* RenderPipelineStateLib.swift in Sources */,
+				27BEFD692585EE7900F39BC9 /* CoreEngine.swift in Sources */,
+				27BEFD7B2585F04100F39BC9 /* VertexShaderLib.swift in Sources */,
+				27BEFD152585E33900F39BC9 /* RayCastingEngine.xcdatamodeld in Sources */,
+				27BEFD8F2585FEEC00F39BC9 /* Utilities.swift in Sources */,
+				27CB3A2B259110FA00A8494E /* Ray.swift in Sources */,
+				27BEFD802585F6BC00F39BC9 /* FragmentShaderLib.swift in Sources */,
+				27BEFD622585EBDF00F39BC9 /* Preferences.swift in Sources */,
+				275FC2CE2591C27D006A8E4A /* BasicCamera.swift in Sources */,
+				27BEFD8A2585FCC100F39BC9 /* VertexDescriptorLib.swift in Sources */,
+				275FC2D62591D06D006A8E4A /* Rays.swift in Sources */,
+				27BEFD942585FF5400F39BC9 /* CoreTypes.swift in Sources */,
+				27608C5C258F26E3009041AF /* Scene.swift in Sources */,
+				275FC2BF2591AF50006A8E4A /* CameraManager.swift in Sources */,
+				27608C41258F1243009041AF /* TestGameObject.swift in Sources */,
+				27BEFD852585F8D300F39BC9 /* RenderPipelineDescriptorLib.swift in Sources */,
+				275FC2C52591AFBC006A8E4A /* Camera.swift in Sources */,
+				27608C2E258F00BE009041AF /* Node.swift in Sources */,
+				27BEFD512585E5B600F39BC9 /* MainView.swift in Sources */,
+				27608C62258F2736009041AF /* SceneManager.swift in Sources */,
+				27CB3A302591229400A8494E /* Walls.swift in Sources */,
+				27BEFD762585F01000F39BC9 /* BasicRayCastingShaderTypes.metal in Sources */,
+				27BEFD102585E33900F39BC9 /* AppDelegate.swift in Sources */,
+				27608C46258F1445009041AF /* MathLib.swift in Sources */,
+				27608C3C258F07E5009041AF /* MeshLib.swift in Sources */,
+				27BEFD712585EFF100F39BC9 /* BasicRayCastingShader.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BEFD1D2585E33A00F39BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BEFD262585E33A00F39BC9 /* RayCastingEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BEFD282585E33A00F39BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BEFD312585E33A00F39BC9 /* RayCastingEngineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27BEFD232585E33A00F39BC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27BEFD0B2585E33900F39BC9 /* RayCastingEngine */;
+			targetProxy = 27BEFD222585E33A00F39BC9 /* PBXContainerItemProxy */;
+		};
+		27BEFD2E2585E33A00F39BC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27BEFD0B2585E33900F39BC9 /* RayCastingEngine */;
+			targetProxy = 27BEFD2D2585E33A00F39BC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27BEFD182585E33A00F39BC9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27BEFD192585E33A00F39BC9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27BEFD332585E33A00F39BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27BEFD342585E33A00F39BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		27BEFD362585E33A00F39BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RayCastingEngine/Others/RayCastingEngine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57QGQR96YD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RayCastingEngine/Others/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nguyenducquang8989.RayCastingEngine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		27BEFD372585E33A00F39BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RayCastingEngine/Others/RayCastingEngine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57QGQR96YD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RayCastingEngine/Others/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nguyenducquang8989.RayCastingEngine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		27BEFD392585E33A00F39BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57QGQR96YD;
+				INFOPLIST_FILE = RayCastingEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nguyenducquang8989.RayCastingEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayCastingEngine.app/Contents/MacOS/RayCastingEngine";
+			};
+			name = Debug;
+		};
+		27BEFD3A2585E33A00F39BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57QGQR96YD;
+				INFOPLIST_FILE = RayCastingEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nguyenducquang8989.RayCastingEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayCastingEngine.app/Contents/MacOS/RayCastingEngine";
+			};
+			name = Release;
+		};
+		27BEFD3C2585E33A00F39BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57QGQR96YD;
+				INFOPLIST_FILE = RayCastingEngineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nguyenducquang8989.RayCastingEngineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RayCastingEngine;
+			};
+			name = Debug;
+		};
+		27BEFD3D2585E33A00F39BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57QGQR96YD;
+				INFOPLIST_FILE = RayCastingEngineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nguyenducquang8989.RayCastingEngineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RayCastingEngine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27BEFD072585E33900F39BC9 /* Build configuration list for PBXProject "RayCastingEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BEFD332585E33A00F39BC9 /* Debug */,
+				27BEFD342585E33A00F39BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BEFD352585E33A00F39BC9 /* Build configuration list for PBXNativeTarget "RayCastingEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BEFD362585E33A00F39BC9 /* Debug */,
+				27BEFD372585E33A00F39BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BEFD382585E33A00F39BC9 /* Build configuration list for PBXNativeTarget "RayCastingEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BEFD392585E33A00F39BC9 /* Debug */,
+				27BEFD3A2585E33A00F39BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BEFD3B2585E33A00F39BC9 /* Build configuration list for PBXNativeTarget "RayCastingEngineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BEFD3C2585E33A00F39BC9 /* Debug */,
+				27BEFD3D2585E33A00F39BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27BEFD132585E33900F39BC9 /* RayCastingEngine.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27BEFD142585E33900F39BC9 /* RayCastingEngine.xcdatamodel */,
+			);
+			currentVersion = 27BEFD142585E33900F39BC9 /* RayCastingEngine.xcdatamodel */;
+			path = RayCastingEngine.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 27BEFD042585E33900F39BC9 /* Project object */;
+}
