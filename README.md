@@ -1,7 +1,7 @@
 # Ray-Casting-Engine
 A graphic engine that does 2D ray casting using Swift's MetalKit and MetalView.   
 
-
+![Ray casting demo](ray-casting-demo.gif)
 
 # Files structure  
 - Core: contains constants, singleton objects, core types, and libraries for Metal Render Pipeline
