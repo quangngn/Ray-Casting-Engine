@@ -93,6 +93,7 @@ extension matrix_float4x4 {
         self = matrix_multiply(self, rotationMatrix)
     }
     
+    // Source: https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl
     public static func perspective(degreesFov: Float, aspectRatio: Float, near: Float, far: Float) -> matrix_float4x4 {
         let fov = degreesFov.toRad;
         
